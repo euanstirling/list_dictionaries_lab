@@ -84,6 +84,6 @@ users["Erik"]["home_town"] = "Edinburgh"
 print(users["Erik"])
 
 # 9. Add a pet dog to Erik called "Fluffy"
-
+users["Erik"]["pets"]
 
 # 10. Add another person to the users dictionary
