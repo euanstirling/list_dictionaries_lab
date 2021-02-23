@@ -55,42 +55,49 @@ users = {
 }
 
 # # # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# print(users["Jonathan"]["twitter"])
+print(users["Jonathan"]["twitter"])
 
 # # # # 2. Get Erik's hometown
-# print(users["Erik"]["home_town"])
+print(users["Erik"]["home_town"])
 
 # # # # 3. Get the array of Erik's lottery numbers
-# print(users["Erik"]["lottery_numbers"])
+print(users["Erik"]["lottery_numbers"])
 
 # # # # 4. Get the species of Avril's pet Monty
-# print(users["Avril"]["pets"][0]["species"])
+print(users["Avril"]["pets"][0]["species"])
 
 # # # 5. Get the smallest of Erik's lottery numbers
 # option 2
 eriks_numbers = sorted(users["Erik"]["lottery_numbers"])
 print(eriks_numbers[0])
 
-# option 1
+# # option 1
 print(users["Erik"]["lottery_numbers"][2])
-# # # print(users["Erik"]min(["lottery_numbers"]))
+
 
 # # # 6. Return an array of Avril's lottery numbers that are even
-# lottery_numbers = users["Avril"]["lottery_numbers"]
-
-# even_numbers = [number for number in lottery_numbers if number % 2 == 0]
-# print(even_numbers)
+lottery_numbers = users["Avril"]["lottery_numbers"]
+even_numbers = [number for number in lottery_numbers if number % 2 == 0]
+print(even_numbers)
 
 # # # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
-# # print(users["Erik"]["lottery_numbers"])
+
+users["Erik"]["lottery_numbers"].append(7)
+print(users["Erik"]["lottery_numbers"])
 
 # # # 8. Change Erik's hometown to Edinburgh
-# users["Erik"]["home_town"] = "Edinburgh"
-# print(users["Erik"])
+users["Erik"]["home_town"] = "Edinburgh"
+print(users["Erik"])
 
 # # 9. Add a pet dog to Erik called "Fluffy"
 
-# users["Erik"]["pets"].append({"name": "Fluff", "species": "dog"})
-# print(users["Erik"]["pets"])
+users["Erik"]["pets"].append({"name": "Fluff", "species": "dog"})
+print(users["Erik"]["pets"])
 
 # 10. Add another person to the users dictionary
+users.update({"Euan": {"twitter": "euanstirling",
+                       "lottery_numbers": [11, 34, 20, 1, 45, 40],
+                       "home_town": "Edinburgh",
+                       "pets": [{"name": "loki", "species": "husky"}]}})
+
+print(users)

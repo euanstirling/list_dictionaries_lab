@@ -4,20 +4,23 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 
 # 1. Print out a list of the even integers:
 
-# for number in numbers:
-#     if number % 2 == 0:
-#         print(number)
+even_integers = []
+for number in numbers:
+    if number % 2 == 0:
+        even_integers.append(number)
+print(even_integers)
 
-# 2. Print the difference between the largest and smallest value:
+
+# # 2. Print the difference between the largest and smallest value:
 
 print(max(numbers) - min(numbers))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
-for number in range(len(numbers)):
-    if numbers[number] == numbers[number - 1]:
+''' this compares the next numbers, not a 2 '''
+for index, number in enumerate(numbers[:-1]):
+    if index == numbers[index + 1]:
         print("True")
-
 
 # 4. Print the sum of the numbers,
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
